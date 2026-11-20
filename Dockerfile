@@ -51,7 +51,7 @@ RUN useradd \
 WORKDIR /opt
 
 RUN curl -fL \
-    https://github.com/keycloak/keycloak/releases/download/26.8.2/keycloak-26.8.2.tar.gz
+    https://github.com/keycloak/keycloak/releases/download/26.8.2/keycloak-26.8.2.tar.gz \
     -o keycloak-26.8.2.tar.gz
 
 RUN tar -xzf keycloak-26.8.2.tar.gz \
