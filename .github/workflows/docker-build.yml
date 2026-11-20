@@ -29,8 +29,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/keycloak-fly:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/keycloak-fly:${{ github.sha }}
-EOF
-
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/keycloak-fly:latest
