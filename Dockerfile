@@ -53,12 +53,11 @@ WORKDIR /opt
 RUN curl -fL \
     https://github.com/keycloak/keycloak/releases/download/26.8.2/keycloak-26.8.2.tar.gz -o keycloak-26.8.2.tar.gz
 
-RUN tar -xzf keycloak-26.8.2.tar.gz \
-    --strip-components=1 -C /opt/keycloak; \
-    && rm keycloak-26.8.2.tar.gz
+RUN tar -xzf keycloak-26.8.2.tar.gz --strip-components=1 -C /opt/keycloak;
+RUN rm keycloak-26.8.2.tar.gz
 
-RUN chown -R 1001:0 /opt/keycloak \
-    && chmod -R g+rwX /opt/keycloak
+RUN chown -R 1001:0 /opt/keycloak
+RUN chmod -R g+rwX /opt/keycloak
 
 # ----------------------------------------------------------
 # CONFIGURACION KEYCLOAK
